@@ -3,10 +3,10 @@ language: generic
 jobs:
   include:
     - stage: master
-      if: branch = master
+      if: branch IN (master)
       env: FOO=branch_is_master
     - stage: development
-      if: branch = development
+      if: branch IN (development)
       env: FOO=branch_is_development
       
 script: echo $FOO
